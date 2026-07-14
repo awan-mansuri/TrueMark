@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Profile Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userProfileImageItem"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <!-- User Info Container -->
+        <LinearLayout
+            android:id="@+id/infoContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/actionsContainer"
+            app:layout_constraintStart_toEndOf="@id/userProfileImageItem"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Name with Group Admin Badge -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/userNameItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/groupAdminLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/rounded_badge"
+                    android:backgroundTint="#FF6B35"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:text="ADMIN"
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/userEmailItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="user@example.com"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="13sp" />
+
+            <!-- Added By Text -->
+            <TextView
+                android:id="@+id/addedByText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Added by: Admin"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="11sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Action Icons Container -->
+        <LinearLayout
+            android:id="@+id/actionsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Edit Button -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/editButtonCard"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:visibility="gone"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#E3F2FD">
+
+                <ImageView
+                    android:id="@+id/editUserIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="@color/colorPrimary" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Info Button -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoButtonCard"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#E8F5E9">
+
+                <ImageView
+                    android:id="@+id/studentDetailIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    app:tint="#4CAF50" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Delete Button -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deleteButtonCard"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFEBEE">
+
+                <ImageView
+                    android:id="@+id/deleteUserIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_delete"
+                    app:tint="#E53935" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

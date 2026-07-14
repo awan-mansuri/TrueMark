@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state - Dark (almost black) -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#212121" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <!-- Unselected state -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/colorPrimary" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</selector>

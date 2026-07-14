@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.TrueMark" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Dynamic Status Bar: Match the top element of the page -->
+        <!-- In Home and Admin dashboards, we'll set this to the blue brand color -->
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- This sets the color for the EditText line when it's focused -->
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <!-- This sets the color for the EditText line when it's not focused -->
+        <item name="colorControlNormal">@color/textColorSecondary</item>
+
+        <!-- Apply the custom button style to all buttons in the app -->
+        <item name="materialButtonStyle">@style/AppTheme.Button</item>
+        
+        <!-- Force light mode defaults -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+
+</resources>

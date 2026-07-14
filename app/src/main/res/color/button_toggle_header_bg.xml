@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background when selected (visible on blue header) -->
+    <item android:state_checked="true" android:color="@color/white" />
+    <!-- Transparent when not selected -->
+    <item android:color="@android:color/transparent" />
+</selector>

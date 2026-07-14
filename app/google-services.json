@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "492540933027",
+    "firebase_url": "https://truemark-570be-default-rtdb.firebaseio.com",
+    "project_id": "truemark-570be",
+    "storage_bucket": "truemark-570be.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492540933027:android:5191ce2d604283630a2016",
+        "android_client_info": {
+          "package_name": "com.ljku.truemark"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpVByksa5l2b7dySVohAB3h17h9yHpwJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
